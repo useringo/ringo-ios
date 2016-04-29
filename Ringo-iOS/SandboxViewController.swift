@@ -9,10 +9,13 @@
 import UIKit
 //import SpriteKit
 //import Cocoa
+import Alamofire
 
 class SandboxViewController: UIViewController {
     
 let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
+    let SERVER_URL = "http://7c7e778e.ngrok.io"
     
     @IBOutlet weak var codeTextIO: UITextView!
     
@@ -45,7 +48,7 @@ let screenSize: CGRect = UIScreen.mainScreen().bounds
         }
         
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("recursiveCodeCheck"), userInfo: nil, repeats: true)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("lineNumbers"), userInfo: nil, repeats: true)
         
         
         
@@ -59,12 +62,12 @@ let screenSize: CGRect = UIScreen.mainScreen().bounds
     
     
     // like an update
-    func recursiveCodeCheck() {
+    func lineNumbers() {
 
     
         var rows = round( (codeTextIO.contentSize.height - codeTextIO.textContainerInset.top - codeTextIO.textContainerInset.bottom) / codeTextIO.font!.lineHeight );
         
-        print(rows);
+//        print(rows);
         
         var lineNumContent = String();
 
@@ -105,40 +108,46 @@ let screenSize: CGRect = UIScreen.mainScreen().bounds
         
         outputIO.text = "Compiling...";
         
-        var code = codeTextIO.text;
-        
-        
-        
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://17172eab.ngrok.io/build-sandbox")!)
-        request.HTTPMethod = "POST"
-        let postString = "code=" + code;
-        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            data, response, error in
-            
-            if error != nil {
-                print("error=\(error)");
-                
-                self.outputIO.text = "An error occurred. Please check your device's internet connection.";
-                
-                return
+        let code = codeTextIO.text;
+
+        Alamofire.request(.POST, SERVER_URL+"/build-sandbox", parameters: ["code":code], encoding: .JSON)
+            .responseData { response in
+                print(response.result)
+                let datastring = NSString(data: response.result.value!, encoding: NSUTF8StringEncoding)
+                self.outputIO.text = String(datastring!)
             }
-            
-            print("response = \(response)")
-            
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print(responseString);
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-               self.outputIO.text = String(responseString!);
-                
-            
-                
-            })
-            
-        }
         
-        task!.resume()
+//        
+//        let request = NSMutableURLRequest(URL: NSURL(string: "http://17172eab.ngrok.io/build-sandbox")!)
+//        request.HTTPMethod = "POST"
+//        let postString = "code=" + code;
+//        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+//        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+//            data, response, error in
+//            
+//            if error != nil {
+//                print("error=\(error)");
+//                
+//                self.outputIO.text = "An error occurred. Please check your device's internet connection.";
+//                
+//                return
+//            }
+//            
+//            print("response = \(response)")
+//            
+//            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+//            print(responseString);
+//            
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//               self.outputIO.text = String(responseString!);
+//                
+//            
+//                
+//            })
+//            
+//        }
+//        
+//        task.resume()
         
 
     }

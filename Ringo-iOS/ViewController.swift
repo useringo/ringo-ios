@@ -29,17 +29,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         var cell = (self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell?)
         
-        cell?.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0);
+        cell?.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 0.0);
+        cell?.contentView.backgroundColor = UIColor.clearColor()
+        cell?.separatorInset = UIEdgeInsetsZero;
         
-    
         
         cell!.textLabel?.text = self.items[indexPath.row]
+        cell!.textLabel?.textColor = UIColor.whiteColor()
+        cell!.textLabel?.font = UIFont.init(name: "Roboto Light", size: 15.5)
         
         return cell!
         
     }
     
     
+    override func viewDidLayoutSubviews() {
+        self.tableView.separatorInset = UIEdgeInsetsZero
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if cell.respondsToSelector("setSeparatorInset:") {
+            cell.separatorInset = UIEdgeInsetsZero
+        }
+        if cell.respondsToSelector("setPreservesSuperviewLayoutMargins:") {
+            
+            cell.preservesSuperviewLayoutMargins = false
+        }
+        if cell.respondsToSelector("setLayoutMargins:") {
+            
+            cell.layoutMargins = UIEdgeInsetsZero
+        }
+        
+    }
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -110,7 +132,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController!.navigationBar.barTintColor = UIColor(red: 19.0/255.0, green: 25.0/255.0, blue: 62.0/255.0, alpha: 1.0);
+        navigationController!.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.init(name: "Roboto Light", size: 21)!, NSForegroundColorAttributeName: UIColor.whiteColor()];
+        
+        navigationController!.setToolbarHidden(true, animated: true)
+        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.separatorInset = UIEdgeInsetsZero
+        self.tableView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.3)
+        if #available(iOS 9.0, *) {
+            tableView.cellLayoutMarginsFollowReadableWidth = false
+        } else {
+            // Fallback on earlier versions
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }

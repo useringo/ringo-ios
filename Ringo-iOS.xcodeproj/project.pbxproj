@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E7F9B4965C1D525FA458AA4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2318CD986F6D73D0F54236 /* Pods.framework */; };
 		C73E01241B55C81800776C31 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73E01231B55C81800776C31 /* TableViewCell.swift */; };
-		C73E01261B55C83B00776C31 /* testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73E01251B55C83B00776C31 /* testview.swift */; };
+		C74C604B1CCBDB77001FDAC4 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C604A1CCBDB77001FDAC4 /* ProjectViewController.swift */; };
 		C75DCDB51B112ACC001772CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75DCDB41B112ACC001772CA /* AppDelegate.swift */; };
 		C75DCDB71B112ACC001772CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75DCDB61B112ACC001772CA /* ViewController.swift */; };
 		C75DCDBA1B112ACC001772CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75DCDB81B112ACC001772CA /* Main.storyboard */; };
 		C75DCDBC1B112ACC001772CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75DCDBB1B112ACC001772CA /* Images.xcassets */; };
 		C75DCDCB1B112ACD001772CA /* Ringo_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75DCDCA1B112ACD001772CA /* Ringo_iOSTests.swift */; };
 		C75DCDD51B112D2F001772CA /* SandboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75DCDD41B112D2F001772CA /* SandboxViewController.swift */; };
-		C7F427CF1B2B34B6008F0760 /* NDAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F427CE1B2B34B6008F0760 /* NDAViewController.swift */; };
+		C7FD82431CCAF6E2002E3C12 /* Abeat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7FD82421CCAF6E2002E3C12 /* Abeat.ttf */; };
+		C7FD82451CCAF74C002E3C12 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7FD82441CCAF74C002E3C12 /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F0237CAC34740EC612AD12C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		841EC4166184A2810C9D1867 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BD2318CD986F6D73D0F54236 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73E01231B55C81800776C31 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		C73E01251B55C83B00776C31 /* testview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testview.swift; sourceTree = "<group>"; };
+		C74C604A1CCBDB77001FDAC4 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		C75DCDAF1B112ACC001772CA /* Ringo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ringo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75DCDB31B112ACC001772CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C75DCDB41B112ACC001772CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +46,8 @@
 		C75DCDC91B112ACD001772CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C75DCDCA1B112ACD001772CA /* Ringo_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ringo_iOSTests.swift; sourceTree = "<group>"; };
 		C75DCDD41B112D2F001772CA /* SandboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandboxViewController.swift; sourceTree = "<group>"; };
-		C7F427CE1B2B34B6008F0760 /* NDAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDAViewController.swift; sourceTree = "<group>"; };
+		C7FD82421CCAF6E2002E3C12 /* Abeat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Abeat.ttf; sourceTree = "<group>"; };
+		C7FD82441CCAF74C002E3C12 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7F9B4965C1D525FA458AA4 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +69,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		389EC00CD3F25E4F9A395652 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F0237CAC34740EC612AD12C /* Pods.debug.xcconfig */,
+				841EC4166184A2810C9D1867 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D56F035061E6400B01FA038 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD2318CD986F6D73D0F54236 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C75DCDA61B112ACC001772CA = {
 			isa = PBXGroup;
 			children = (
 				C75DCDB11B112ACC001772CA /* Ringo-iOS */,
 				C75DCDC71B112ACD001772CA /* Ringo-iOSTests */,
 				C75DCDB01B112ACC001772CA /* Products */,
+				389EC00CD3F25E4F9A395652 /* Pods */,
+				3D56F035061E6400B01FA038 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,10 +112,11 @@
 				C75DCDB41B112ACC001772CA /* AppDelegate.swift */,
 				C75DCDB61B112ACC001772CA /* ViewController.swift */,
 				C73E01231B55C81800776C31 /* TableViewCell.swift */,
-				C73E01251B55C83B00776C31 /* testview.swift */,
 				C75DCDD41B112D2F001772CA /* SandboxViewController.swift */,
-				C7F427CE1B2B34B6008F0760 /* NDAViewController.swift */,
 				C75DCDB81B112ACC001772CA /* Main.storyboard */,
+				C74C604A1CCBDB77001FDAC4 /* ProjectViewController.swift */,
+				C7FD82441CCAF74C002E3C12 /* Roboto-Light.ttf */,
+				C7FD82421CCAF6E2002E3C12 /* Abeat.ttf */,
 				C75DCDBB1B112ACC001772CA /* Images.xcassets */,
 				C75DCDB21B112ACC001772CA /* Supporting Files */,
 			);
@@ -128,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C75DCDCE1B112ACD001772CA /* Build configuration list for PBXNativeTarget "Ringo-iOS" */;
 			buildPhases = (
+				4DD0A556F929B194E7113013 /* Check Pods Manifest.lock */,
 				C75DCDAB1B112ACC001772CA /* Sources */,
 				C75DCDAC1B112ACC001772CA /* Frameworks */,
 				C75DCDAD1B112ACC001772CA /* Resources */,
+				044FD4B64A533FE25A45DE15 /* Embed Pods Frameworks */,
+				6AB4303604C69AB536D829BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,7 +232,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FD82431CCAF6E2002E3C12 /* Abeat.ttf in Resources */,
 				C75DCDBA1B112ACC001772CA /* Main.storyboard in Resources */,
+				C7FD82451CCAF74C002E3C12 /* Roboto-Light.ttf in Resources */,
 				C75DCDBC1B112ACC001772CA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,16 +248,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		044FD4B64A533FE25A45DE15 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD0A556F929B194E7113013 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AB4303604C69AB536D829BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C75DCDAB1B112ACC001772CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C73E01241B55C81800776C31 /* TableViewCell.swift in Sources */,
-				C7F427CF1B2B34B6008F0760 /* NDAViewController.swift in Sources */,
+				C74C604B1CCBDB77001FDAC4 /* ProjectViewController.swift in Sources */,
 				C75DCDB71B112ACC001772CA /* ViewController.swift in Sources */,
 				C75DCDB51B112ACC001772CA /* AppDelegate.swift in Sources */,
-				C73E01261B55C83B00776C31 /* testview.swift in Sources */,
 				C75DCDD51B112D2F001772CA /* SandboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,9 +422,11 @@
 		};
 		C75DCDCF1B112ACD001772CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F0237CAC34740EC612AD12C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Ringo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -354,9 +435,11 @@
 		};
 		C75DCDD01B112ACD001772CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 841EC4166184A2810C9D1867 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Ringo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
